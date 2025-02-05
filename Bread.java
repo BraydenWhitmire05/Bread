@@ -124,7 +124,7 @@ public class Bread {
 	                "\n%.2f cups of sugar\n%.2f tsp of Baking Powder\n%.2f tsps of yeast",flour,water,salt, sugar, bakingPowder, yeast);
 	    }
 
-	    public boolean isBaked(){
+		public boolean isBaked(){
 	        if(state){
 	            System.out.println(breadName + " is baked");
 	            return true;
@@ -135,19 +135,19 @@ public class Bread {
 	        }
 	    }
 
-	    public boolean isBaked(boolean state){
+	    public String isBaked(boolean state){
 
 	        this.state = state;
-	        if(this.state){
-	            System.out.println(breadName + " is baked");
-	            return true;
+	        if(this.state == true){
+	         return breadName + " is baked";
+	            
 	        }
 	        else {
-	            System.out.println(breadName + " is not baked");
-	            return false;
+	        	return breadName + " is not baked";
+	            
 	        }
 	    }
 	    public String toString(){
-	        return String.format("%s\n%s\n%s\n%s\n",breadName,shape,getIngredients(),recipe);
+	        return String.format("%s\n%s\n",breadName,shape);
 	    }
 	}
